@@ -3,7 +3,7 @@ MODEL:
 INPUT:
   IMAGE_SIZE: 300
 DATASETS:
-  TRAIN: ("voc_2007_trainval", "voc_2012_trainval")
+  TRAIN: ("voc_2007_trainval", ) ## TRAIN: ("voc_2007_trainval", "voc_2012_trainval") **modify-ganyongdong-2020.10.5
   TEST: ("voc_2007_test", )
 SOLVER:
   MAX_ITER: 120000
