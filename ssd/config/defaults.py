@@ -7,7 +7,7 @@ _C.MODEL.META_ARCHITECTURE = 'SSDDetector'
 _C.MODEL.DEVICE = "cuda"
 # match default boxes to any ground truth with jaccard overlap higher than a threshold (0.5)
 _C.MODEL.THRESHOLD = 0.5
-_C.MODEL.NUM_CLASSES = 21
+_C.MODEL.NUM_CLASSES = 6 # _C.MODEL.NUM_CLASSES = 5 **modify-ganyongdong-2020.10.5
 # Hard negative mining
 _C.MODEL.NEG_POS_RATIO = 3
 _C.MODEL.CENTER_VARIANCE = 0.1
