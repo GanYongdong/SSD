@@ -24,9 +24,9 @@ def delte_last_line(file_name):
 
 if __name__ == '__main__':
     #源图片所在目录
-    pic_dir = os.getcwd() + '/datasets/VOC2007/JPEGImages'
+    pic_dir = os.getcwd() + '/JPEGImages'
     #生成txt所在目录
-    txt_dir = os.getcwd() + '/datasets/VOC2007/ImageSets/Main/'
+    txt_dir = os.getcwd() + '/ImageSets/Main/'
     #生成txt路径名
     train_txt_path = txt_dir + 'train.txt'
     val_txt_path = txt_dir + 'val.txt'
@@ -38,9 +38,9 @@ if __name__ == '__main__':
     total_num = len(fileNameList)
     print('图片个数：',len(fileNameList))
     #划分比例，占所有图像的比例，三个不交叉。trainval由train和val合并形成，不需要指定
-    train_rate = 0.004
-    val_rate = 0.004
-    test_rate = 0.002
+    train_rate = 0.4
+    val_rate = 0.4
+    test_rate = 0.2
 
     train_cnt = 0
     val_cnt = 0
