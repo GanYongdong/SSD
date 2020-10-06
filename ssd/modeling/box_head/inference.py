@@ -36,7 +36,7 @@ class PostProcessor:
             labels = labels.reshape(-1)
 
             # remove low scoring boxes
-            indices = torch.nonzero(scores > self.cfg.TEST.CONFIDENCE_THRESHOLD).squeeze(1)
+            indices = torch.nonzero(scores > self.cfg.TEST.CONFIDENCE_THRESHOLD, as_tuple = False).squeeze(1)
             boxes, scores, labels = boxes[indices], scores[indices], labels[indices]
 
             boxes[:, 0::2] *= self.width
