@@ -31,6 +31,6 @@ dist/
 *.xml
 
 # output
-# output/vgg_ssd300_voc0712
-# output/vgg_ssd512_voc0712
-# output
+output/vgg_ssd300_voc0712
+output/vgg_ssd512_voc0712
+output
