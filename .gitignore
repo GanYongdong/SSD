@@ -29,3 +29,11 @@ dist/
 # png和xml
 *.png
 *.xml
+
+# output
+output/vgg_ssd300_voc0712
+output/vgg_ssd512_voc0712
+output
+
+# 其他
+1.原作者ssd代码，用于参考
