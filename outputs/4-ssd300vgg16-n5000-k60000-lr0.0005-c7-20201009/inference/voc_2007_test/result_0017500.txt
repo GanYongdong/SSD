@@ -1,7 +1,0 @@
-mAP: 0.8729
-homofilt        : 0.9001
-medifilt        : 0.7960
-addnoise        : 0.9081
-histgreq        : 0.8305
-gausfilt        : 0.9024
-prewshap        : 0.9004
