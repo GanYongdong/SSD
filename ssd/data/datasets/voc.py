@@ -9,9 +9,16 @@ from ssd.structures.container import Container
 
 class VOCDataset(torch.utils.data.Dataset):
     
+    # class_names = ('__background__',
+    #                'homof', 'medif', 'aspn_', 'histe',
+    #                'gausf', 'sharp', 'awgn_', 'rsamp')
+    # class_names = ('__background__',
+    #             'homofilt', 'medifilt', 'addnoise', 'histgreq',
+    #             'gausfilt', 'prewshap',)
     class_names = ('__background__',
-                   'homofilt', 'medifilt', 'addnoise', 'histgreq',
-                   'gausfilt', 'prewshap')
+                '1', '2', '3', '4',
+                '5', )
+                
     # **modify-ganyongdong-2020.10.5
     # class_names = ('__background__',
     #                'aeroplane', 'bicycle', 'bird', 'boat',

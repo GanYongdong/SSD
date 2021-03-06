@@ -19,7 +19,7 @@ _C.MODEL.SIZE_VARIANCE = 0.2
 _C.MODEL.BACKBONE = CN()
 _C.MODEL.BACKBONE.NAME = 'vgg'
 _C.MODEL.BACKBONE.OUT_CHANNELS = (512, 1024, 512, 256, 256, 256)
-_C.MODEL.BACKBONE.PRETRAINED = True
+_C.MODEL.BACKBONE.PRETRAINED = False
 
 # -----------------------------------------------------------------------------
 # PRIORS
@@ -65,7 +65,7 @@ _C.DATASETS.TEST = ()
 # -----------------------------------------------------------------------------
 _C.DATA_LOADER = CN()
 # Number of data loading threads
-_C.DATA_LOADER.NUM_WORKERS = 8
+_C.DATA_LOADER.NUM_WORKERS = 4
 _C.DATA_LOADER.PIN_MEMORY = True
 
 # ---------------------------------------------------------------------------- #
@@ -91,6 +91,6 @@ _C.TEST.NMS_THRESHOLD = 0.45
 _C.TEST.CONFIDENCE_THRESHOLD = 0.01
 _C.TEST.MAX_PER_CLASS = -1
 _C.TEST.MAX_PER_IMAGE = 100
-_C.TEST.BATCH_SIZE = 10
+_C.TEST.BATCH_SIZE = 18
 
 _C.OUTPUT_DIR = 'outputs'
