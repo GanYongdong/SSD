@@ -73,6 +73,14 @@ def do_train(cfg, model,
     start_iter = arguments["iteration"]
     start_training_time = time.time()
     end = time.time()
+
+    # # 恢复
+    # checkpoint = torch.load("/home/ganyd/Research/SSD_lufficc/outputs/vgg_ssd300_voc0712/model_030000.pth");
+    # model.load_state_dict(checkpoint['model'])
+    # optimizer.load_state_dict(checkpoint['optimizer'])
+    # # scheduler.load_state_dict(checkpoint['scheduler'])
+    # start_iter = checkpoint['iteration']+1
+
     for iteration, (images, targets, _) in enumerate(data_loader, start_iter):
         iteration = iteration + 1
         arguments["iteration"] = iteration
