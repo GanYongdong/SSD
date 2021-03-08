@@ -6,9 +6,9 @@ DATASETS:
   TRAIN: ("voc_2007_trainval", ) ## TRAIN: ("voc_2007_trainval", "voc_2012_trainval") **modify-ganyongdong-2020.10.5
   TEST: ("voc_2007_test", )
 SOLVER:
-  MAX_ITER: 110000
-  LR_STEPS: [50000, 60000, 70000, 80000, 90000, 91000, 92000, 93000, 94000, 95000, 98000, 100000]
-  GAMMA: 0.9
+  MAX_ITER: 120000
+  LR_STEPS: [80000, 85000, 90000, 95000, 100000, 105000, 110000]
+  GAMMA: 0.8
   BATCH_SIZE: 14
   LR: 5e-4
 
