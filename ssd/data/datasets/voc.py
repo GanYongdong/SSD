@@ -3,15 +3,17 @@ import torch.utils.data
 import numpy as np
 import xml.etree.ElementTree as ET
 from PIL import Image
-
+import dataset_dir
 from ssd.structures.container import Container
 
 
 class VOCDataset(torch.utils.data.Dataset):
-    
-    class_names = ('__background__',
-                   'homof', 'medif', 'aspn_', 'histe',
-                   'gausf', 'sharp', 'awgn_', 'rsamp')
+
+    class_names = ('__background__', 'homofilt', 'medianfilt', 'awgn',
+                   'histeq', 'gaussfilt', 'sharp', 'resampling', 'gamma')    
+    # class_names = ('__background__',
+    #                'homof', 'medif', 'aspn_', 'histe',
+    #                'gausf', 'sharp', 'awgn_', 'rsamp')
     # class_names = ('__background__',
     #             'homofilt', 'medifilt', 'addnoise', 'histgreq',
     #             'gausfilt', 'prewshap',)
@@ -33,14 +35,14 @@ class VOCDataset(torch.utils.data.Dataset):
             data_dir: the root of the VOC2007 or VOC2012 dataset, the directory contains the following sub-directories:
                 Annotations, ImageSets, JPEGImages, SegmentationClass, SegmentationObject.
         """
-        self.data_dir = data_dir
+        # self.data_dir = data_dir
+        self.data_dir = dataset_dir.dir
         self.split = split
         self.transform = transform
         self.target_transform = target_transform
         image_sets_file = os.path.join(self.data_dir, "ImageSets", "Main", "%s.txt" % self.split)
         self.ids = VOCDataset._read_image_ids(image_sets_file)
         self.keep_difficult = keep_difficult
-
         self.class_dict = {class_name: i for i, class_name in enumerate(self.class_names)}
 
     def __getitem__(self, index):
@@ -107,7 +109,7 @@ class VOCDataset(torch.utils.data.Dataset):
         return {"height": im_info[0], "width": im_info[1]}
 
     def _read_image(self, image_id):
-        image_file = os.path.join(self.data_dir, "JPEGImages", "%s.png" % image_id)
+        image_file = os.path.join(self.data_dir, "JPEGImages", "%s.jpg" % image_id)
         image = Image.open(image_file).convert("RGB")
         image = np.array(image)
         return image

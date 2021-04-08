@@ -78,12 +78,12 @@ def main():
     parser = argparse.ArgumentParser(description="SSD Demo.")
     parser.add_argument(
         "--config-file",
-        default="",
+        default="configs/vgg_ssd300_voc0712.yaml",
         metavar="FILE",
         help="path to config file",
         type=str,
     )
-    parser.add_argument("--ckpt", type=str, default=None, help="Trained weights.")
+    parser.add_argument("--ckpt", type=str, default="./outputs/vgg_ssd300_voc0712/model_080000.pth", help="Trained weights.")
     parser.add_argument("--score_threshold", type=float, default=0.7)
     parser.add_argument("--images_dir", default='demo', type=str, help='Specify a image dir to do prediction.')
     parser.add_argument("--output_dir", default='demo/result', type=str, help='Specify a image dir to save predicted images.')
