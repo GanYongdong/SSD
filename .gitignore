@@ -27,7 +27,6 @@ dist/
 .DS_Store
 
 # png和xml
-*.png
 *.xml
 
 # output
