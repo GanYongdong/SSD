@@ -1,1 +1,1 @@
-dir = "D:/Research/My_tamper_detect_dataset_generate/10dataset_irregular_pngjpg_06resize_3x3kernel_8class_awgn_Parallelogram_andRect_n17125/voc_dataset"
+dir = "/media/D/Research/My_tamper_detect_dataset_generate/10dataset_irregular_pngjpg_06resize_3x3kernel_8class_awgn_Parallelogram_andRect_n17125/voc_dataset"
